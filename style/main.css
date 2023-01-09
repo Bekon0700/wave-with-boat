@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.svg-container {
+  border: 1px solid black;
+  margin: 50px;
+}
+
+.shape-fill {
+  stroke: purple;
+  stroke-width: 1;
+  fill: lime;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.boat {
+  background: url(./../img/boast.svg);
+  height: 294px;
+  width: 250px;
+  background-size: cover;
+  position: absolute;
+  bottom: 190px;
+  left: 50%;
+  -webkit-animation: boat-up-down 6s ease -0.125s infinite alternate;
+          animation: boat-up-down 6s ease -0.125s infinite alternate;
+}
+
+.wave {
+  position: absolute;
+  background: url("./../img/wave.svg");
+  width: 6400px;
+  right: 0;
+  bottom: 0;
+  height: 190px;
+}
+
+.wave-1 {
+  right: 0;
+  z-index: 99;
+  -webkit-animation: wave-run 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+          animation: wave-run 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+}
+
+.wave-2 {
+  right: -600px;
+  -webkit-animation: wave-run 10s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite, riseAndDown 6s ease -0.125s infinite;
+          animation: wave-run 10s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite, riseAndDown 6s ease -0.125s infinite;
+}
+
+@-webkit-keyframes wave-run {
+  0% {
+    right: 0;
+  }
+  100% {
+    right: -1600px;
+  }
+}
+
+@keyframes wave-run {
+  0% {
+    right: 0;
+  }
+  100% {
+    right: -1600px;
+  }
+}
+@-webkit-keyframes riseAndDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+@keyframes riseAndDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+@-webkit-keyframes boat-up-down {
+  0% {
+    transform: translate(5px, 5px) rotate(10deg);
+    bottom: 190px;
+  }
+  25% {
+    transform: translate(-2px, -5px) rotate(10deg);
+    bottom: 170px;
+  }
+  50% {
+    transform: translate(0) rotate(0deg);
+    bottom: 150px;
+  }
+  75% {
+    transform: translate(5px, 5px) rotate(10deg);
+    bottom: 160px;
+  }
+  100% {
+    transform: translate(-2px, -5px) rotate(10deg);
+    bottom: 190px;
+  }
+}
+@keyframes boat-up-down {
+  0% {
+    transform: translate(5px, 5px) rotate(10deg);
+    bottom: 190px;
+  }
+  25% {
+    transform: translate(-2px, -5px) rotate(10deg);
+    bottom: 170px;
+  }
+  50% {
+    transform: translate(0) rotate(0deg);
+    bottom: 150px;
+  }
+  75% {
+    transform: translate(5px, 5px) rotate(10deg);
+    bottom: 160px;
+  }
+  100% {
+    transform: translate(-2px, -5px) rotate(10deg);
+    bottom: 190px;
+  }
+}/*# sourceMappingURL=main.css.map */
